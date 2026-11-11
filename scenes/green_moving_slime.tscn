@@ -1,0 +1,84 @@
+[gd_scene format=3 uid="uid://cx5v171olk6vp"]
+
+[ext_resource type="Texture2D" uid="uid://bl53gpvg5mh1y" path="res://assets/sprites/slime_green.png" id="1_bhqk2"]
+[ext_resource type="Script" uid="uid://rx60ysqqse0b" path="res://scripts/green_moving_slime.gd" id="1_qox5k"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qox5k"]
+atlas = ExtResource("1_bhqk2")
+region = Rect2(0, 24, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lij1r"]
+atlas = ExtResource("1_bhqk2")
+region = Rect2(24, 24, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qrgov"]
+atlas = ExtResource("1_bhqk2")
+region = Rect2(48, 24, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_14pkr"]
+atlas = ExtResource("1_bhqk2")
+region = Rect2(72, 24, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_snnjq"]
+atlas = ExtResource("1_bhqk2")
+region = Rect2(0, 48, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_k3t0b"]
+atlas = ExtResource("1_bhqk2")
+region = Rect2(24, 48, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_sjuy8"]
+atlas = ExtResource("1_bhqk2")
+region = Rect2(48, 48, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ynohq"]
+atlas = ExtResource("1_bhqk2")
+region = Rect2(72, 48, 24, 24)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_s4o2x"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qox5k")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lij1r")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qrgov")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_14pkr")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_snnjq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_k3t0b")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_sjuy8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ynohq")
+}],
+"loop": 2,
+"name": &"default",
+"speed": 6.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_2h3lg"]
+size = Vector2(10, 11)
+
+[node name="GreenMovingSlime" type="Area2D" unique_id=1808999118]
+script = ExtResource("1_qox5k")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1445187464]
+sprite_frames = SubResource("SpriteFrames_s4o2x")
+autoplay = "default"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=2034392273]
+position = Vector2(0, 5.5)
+shape = SubResource("RectangleShape2D_2h3lg")
+
+[node name="Timer" type="Timer" parent="." unique_id=901039327]

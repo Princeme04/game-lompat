@@ -1,0 +1,100 @@
+[gd_scene format=3 uid="uid://cer37fj7spdu2"]
+
+[ext_resource type="Script" uid="uid://cx6jn6h6d4kkg" path="res://scripts/settings.gd" id="1_6wm04"]
+[ext_resource type="FontFile" uid="uid://c53kogtyjwsss" path="res://assets/fonts/PixelOperator8-Bold.ttf" id="1_r6d6q"]
+[ext_resource type="FontFile" uid="uid://dbjl1e6kdxpl6" path="res://assets/fonts/PixelOperator8.ttf" id="2_6wm04"]
+
+[node name="Settings" type="ColorRect" unique_id=276461933]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.83756787, 0.438441, 0.39979297, 1)
+script = ExtResource("1_6wm04")
+
+[node name="SettingLabel" type="Label" parent="." unique_id=55063637]
+layout_mode = 0
+offset_left = 181.0
+offset_top = 130.0
+offset_right = 297.0
+offset_bottom = 172.0
+theme_override_fonts/font = ExtResource("1_r6d6q")
+theme_override_font_sizes/font_size = 30
+text = "Settings"
+
+[node name="MasterAudio" type="Label" parent="." unique_id=118518338]
+layout_mode = 0
+offset_left = 248.0
+offset_top = 229.0
+offset_right = 473.0
+offset_bottom = 271.0
+theme_override_fonts/font = ExtResource("1_r6d6q")
+theme_override_font_sizes/font_size = 15
+text = "Master Audio"
+
+[node name="Music" type="Label" parent="." unique_id=239998053]
+layout_mode = 0
+offset_left = 249.0
+offset_top = 307.0
+offset_right = 474.0
+offset_bottom = 349.0
+theme_override_fonts/font = ExtResource("1_r6d6q")
+theme_override_font_sizes/font_size = 15
+text = "Music"
+
+[node name="SFX" type="Label" parent="." unique_id=555721474]
+layout_mode = 0
+offset_left = 249.0
+offset_top = 383.0
+offset_right = 474.0
+offset_bottom = 425.0
+theme_override_fonts/font = ExtResource("1_r6d6q")
+theme_override_font_sizes/font_size = 15
+text = "SFX"
+
+[node name="MasterSlider" type="HSlider" parent="." unique_id=1166225746]
+layout_mode = 0
+offset_left = 575.0
+offset_top = 237.0
+offset_right = 769.0
+offset_bottom = 253.0
+mouse_default_cursor_shape = 2
+
+[node name="MusicSlider" type="HSlider" parent="." unique_id=1953212529]
+layout_mode = 0
+offset_left = 575.0
+offset_top = 313.0
+offset_right = 769.0
+offset_bottom = 329.0
+mouse_default_cursor_shape = 2
+
+[node name="SFXSlider" type="HSlider" parent="." unique_id=1125365804]
+layout_mode = 0
+offset_left = 575.0
+offset_top = 390.0
+offset_right = 769.0
+offset_bottom = 406.0
+mouse_default_cursor_shape = 2
+
+[node name="BackButton" type="Button" parent="." unique_id=154805555]
+layout_mode = 0
+offset_left = 674.0
+offset_top = 498.0
+offset_right = 770.0
+offset_bottom = 532.0
+mouse_default_cursor_shape = 2
+theme_override_fonts/font = ExtResource("2_6wm04")
+theme_override_font_sizes/font_size = 15
+text = "Back"
+
+[node name="SaveButton" type="Button" parent="." unique_id=1151875952]
+layout_mode = 0
+offset_left = 813.0
+offset_top = 498.0
+offset_right = 909.0
+offset_bottom = 532.0
+mouse_default_cursor_shape = 2
+theme_override_fonts/font = ExtResource("2_6wm04")
+theme_override_font_sizes/font_size = 15
+text = "Save"

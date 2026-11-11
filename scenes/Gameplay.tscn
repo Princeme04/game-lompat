@@ -1,0 +1,753 @@
+[gd_scene format=3 uid="uid://e5a3q8i2ex32"]
+
+[ext_resource type="Script" uid="uid://bqh4uu186aoqx" path="res://scripts/gameplay.gd" id="1_2hsy7"]
+[ext_resource type="PackedScene" uid="uid://bvbadsv2ymlp4" path="res://scenes/background_tile.tscn" id="1_a8mty"]
+[ext_resource type="PackedScene" uid="uid://b825funb6miqw" path="res://scenes/player.tscn" id="2_jfxgp"]
+[ext_resource type="PackedScene" uid="uid://byjxsopewi644" path="res://scenes/green_platform.tscn" id="3_gnmmn"]
+[ext_resource type="PackedScene" uid="uid://deyujly08swuu" path="res://scenes/yellow_platform.tscn" id="4_4rwr5"]
+[ext_resource type="PackedScene" uid="uid://bpbfh7c7bjkf2" path="res://scenes/grey_platform.tscn" id="5_jfxgp"]
+[ext_resource type="PackedScene" uid="uid://devqro8g757pi" path="res://scenes/snow_platform.tscn" id="6_gnmmn"]
+[ext_resource type="PackedScene" uid="uid://c704jikmw2fvw" path="res://scenes/coin.tscn" id="7_4rwr5"]
+[ext_resource type="PackedScene" uid="uid://c2hwnenn0s43e" path="res://scenes/end_point.tscn" id="8_xbw1n"]
+[ext_resource type="PackedScene" uid="uid://dc20vsv85bspf" path="res://scenes/pueple_slime.tscn" id="9_hsn8a"]
+[ext_resource type="Script" uid="uid://ccdju3lqd3osm" path="res://scripts/game_over_menu.gd" id="10_hlv5w"]
+[ext_resource type="FontFile" uid="uid://c53kogtyjwsss" path="res://assets/fonts/PixelOperator8-Bold.ttf" id="11_e3rac"]
+[ext_resource type="FontFile" uid="uid://dbjl1e6kdxpl6" path="res://assets/fonts/PixelOperator8.ttf" id="12_2hsy7"]
+[ext_resource type="Script" uid="uid://cld1qoh8ycdbg" path="res://scripts/finish.gd" id="13_e3rac"]
+
+[sub_resource type="Animation" id="Animation_rus8k"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(619, 612)]
+}
+
+[sub_resource type="Animation" id="Animation_5xbjy"]
+resource_name = "naik_turun"
+length = 1.5666667
+loop_mode = 2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.001, 0.13333334, 1.5666667),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(619, 612), Vector2(619, 612), Vector2(622, 483)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_4nkto"]
+_data = {
+&"RESET": SubResource("Animation_rus8k"),
+&"naik_turun": SubResource("Animation_5xbjy")
+}
+
+[sub_resource type="Animation" id="Animation_xbw1n"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(2043, 593)]
+}
+
+[sub_resource type="Animation" id="Animation_hsn8a"]
+resource_name = "kiri_kanan"
+length = 2.0
+loop_mode = 2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(2043, 593), Vector2(2201, 593)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_4j5yk"]
+_data = {
+&"RESET": SubResource("Animation_xbw1n"),
+&"kiri_kanan": SubResource("Animation_hsn8a")
+}
+
+[sub_resource type="Animation" id="Animation_gnmmn"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1462, 578)]
+}
+
+[sub_resource type="Animation" id="Animation_4rwr5"]
+resource_name = "naik_turun"
+length = 2.9666667
+loop_mode = 2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 2.9666667),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(1462, 578), Vector2(1462, 225)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_xbw1n"]
+_data = {
+&"RESET": SubResource("Animation_gnmmn"),
+&"naik_turun": SubResource("Animation_4rwr5")
+}
+
+[sub_resource type="Animation" id="Animation_4j5yk"]
+length = 2.0
+loop_mode = 2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(2430, -89), Vector2(2430, -273)]
+}
+
+[sub_resource type="Animation" id="Animation_l501g"]
+resource_name = "naik_turun"
+length = 2.0
+loop_mode = 2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(2430, -89), Vector2(2430, -252)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_hlv5w"]
+_data = {
+&"RESET": SubResource("Animation_4j5yk"),
+&"naik_turun": SubResource("Animation_l501g")
+}
+
+[sub_resource type="Animation" id="Animation_hlv5w"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(3497, -638)]
+}
+
+[sub_resource type="Animation" id="Animation_e3rac"]
+resource_name = "naik_turun"
+length = 0.56666666
+loop_mode = 2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.56, 0.56666666),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(3497, -643), Vector2(3497, -637.68945), Vector2(3497, -639.65)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_2hsy7"]
+_data = {
+&"RESET": SubResource("Animation_hlv5w"),
+&"naik_turun": SubResource("Animation_e3rac")
+}
+
+[node name="Gameplay" type="Node2D" unique_id=1629504759]
+script = ExtResource("1_2hsy7")
+
+[node name="BackgroundTile" parent="." unique_id=1933887547 instance=ExtResource("1_a8mty")]
+position = Vector2(179, 93)
+
+[node name="Player" parent="." unique_id=207996366 instance=ExtResource("2_jfxgp")]
+position = Vector2(81, 586)
+
+[node name="Camera2D" type="Camera2D" parent="Player" unique_id=398185493]
+zoom = Vector2(2, 2)
+limit_bottom = 800
+position_smoothing_enabled = true
+
+[node name="Platforms" type="Node" parent="." unique_id=228620904]
+
+[node name="GreenPlatform" parent="Platforms" unique_id=1600775608 instance=ExtResource("3_gnmmn")]
+position = Vector2(460, 629)
+
+[node name="GreenPlatform2" parent="Platforms" unique_id=1694251541 instance=ExtResource("3_gnmmn")]
+position = Vector2(540, 613)
+
+[node name="GreenPlatform3" parent="Platforms" unique_id=1780819732 instance=ExtResource("3_gnmmn")]
+position = Vector2(619, 612)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Platforms/GreenPlatform3" unique_id=1330284144]
+libraries/ = SubResource("AnimationLibrary_4nkto")
+autoplay = &"naik_turun"
+
+[node name="YellowPlatform" parent="Platforms" unique_id=927979276 instance=ExtResource("4_4rwr5")]
+position = Vector2(1899, 593)
+
+[node name="YellowPlatform2" parent="Platforms" unique_id=1632776544 instance=ExtResource("4_4rwr5")]
+position = Vector2(1978, 593)
+
+[node name="YellowPlatform4" parent="Platforms" unique_id=1741656690 instance=ExtResource("4_4rwr5")]
+position = Vector2(2735, 461)
+
+[node name="YellowPlatform3" parent="Platforms" unique_id=1951690436 instance=ExtResource("4_4rwr5")]
+position = Vector2(2043, 593)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Platforms/YellowPlatform3" unique_id=842510139]
+libraries/ = SubResource("AnimationLibrary_4j5yk")
+autoplay = &"kiri_kanan"
+
+[node name="GreyPlatform" parent="Platforms" unique_id=2137929802 instance=ExtResource("5_jfxgp")]
+position = Vector2(1462, 578)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Platforms/GreyPlatform" unique_id=1106489320]
+libraries/ = SubResource("AnimationLibrary_xbw1n")
+autoplay = &"naik_turun"
+
+[node name="GreyPlatform2" parent="Platforms" unique_id=549305264 instance=ExtResource("5_jfxgp")]
+position = Vector2(2205, 338)
+
+[node name="SnowPlatform" parent="Platforms" unique_id=1451706314 instance=ExtResource("6_gnmmn")]
+position = Vector2(2159, 305)
+
+[node name="SnowPlatform2" parent="Platforms" unique_id=218397200 instance=ExtResource("6_gnmmn")]
+position = Vector2(2224, 275)
+
+[node name="SnowPlatform3" parent="Platforms" unique_id=1668555957 instance=ExtResource("6_gnmmn")]
+position = Vector2(2276, 244)
+
+[node name="SnowPlatform4" parent="Platforms" unique_id=238125737 instance=ExtResource("6_gnmmn")]
+position = Vector2(2225, 211)
+
+[node name="SnowPlatform5" parent="Platforms" unique_id=887270941 instance=ExtResource("6_gnmmn")]
+position = Vector2(2756, 81)
+
+[node name="SnowPlatform6" parent="Platforms" unique_id=1272343920 instance=ExtResource("6_gnmmn")]
+position = Vector2(2838, 57)
+
+[node name="SnowPlatform7" parent="Platforms" unique_id=256225808 instance=ExtResource("6_gnmmn")]
+position = Vector2(2877, 33)
+
+[node name="SnowPlatform8" parent="Platforms" unique_id=75657485 instance=ExtResource("6_gnmmn")]
+position = Vector2(2911, 0)
+
+[node name="SnowPlatform9" parent="Platforms" unique_id=2127462370 instance=ExtResource("6_gnmmn")]
+position = Vector2(2839, -16)
+
+[node name="SnowPlatform10" parent="Platforms" unique_id=1397641120 instance=ExtResource("6_gnmmn")]
+position = Vector2(2495, -95)
+
+[node name="SnowPlatform11" parent="Platforms" unique_id=1743847539 instance=ExtResource("6_gnmmn")]
+position = Vector2(2430, -89)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Platforms/SnowPlatform11" unique_id=1997637726]
+libraries/ = SubResource("AnimationLibrary_hlv5w")
+autoplay = &"RESET"
+
+[node name="Coins" type="Node" parent="." unique_id=402572339]
+
+[node name="Coin" parent="Coins" unique_id=1374839627 instance=ExtResource("7_4rwr5")]
+position = Vector2(185, 629)
+
+[node name="Coin2" parent="Coins" unique_id=1573418010 instance=ExtResource("7_4rwr5")]
+position = Vector2(344, 628)
+
+[node name="Coin3" parent="Coins" unique_id=1654845296 instance=ExtResource("7_4rwr5")]
+position = Vector2(540, 598)
+
+[node name="Coin4" parent="Coins" unique_id=1633000686 instance=ExtResource("7_4rwr5")]
+position = Vector2(619, 435)
+
+[node name="Coin5" parent="Coins" unique_id=1708709948 instance=ExtResource("7_4rwr5")]
+position = Vector2(808, 480)
+
+[node name="Coin6" parent="Coins" unique_id=1945696381 instance=ExtResource("7_4rwr5")]
+position = Vector2(910, 481)
+
+[node name="Coin7" parent="Coins" unique_id=160970926 instance=ExtResource("7_4rwr5")]
+position = Vector2(1029, 481)
+
+[node name="Coin8" parent="Coins" unique_id=1784071215 instance=ExtResource("7_4rwr5")]
+position = Vector2(993, 481)
+
+[node name="Coin9" parent="Coins" unique_id=560162591 instance=ExtResource("7_4rwr5")]
+position = Vector2(960, 481)
+
+[node name="Coin10" parent="Coins" unique_id=1213181310 instance=ExtResource("7_4rwr5")]
+position = Vector2(934, 481)
+
+[node name="Coin11" parent="Coins" unique_id=1463716532 instance=ExtResource("7_4rwr5")]
+position = Vector2(1160, 451)
+
+[node name="Coin12" parent="Coins" unique_id=1498260376 instance=ExtResource("7_4rwr5")]
+position = Vector2(1337, 436)
+
+[node name="Coin13" parent="Coins" unique_id=124695511 instance=ExtResource("7_4rwr5")]
+position = Vector2(1672, 546)
+
+[node name="Coin14" parent="Coins" unique_id=293061105 instance=ExtResource("7_4rwr5")]
+position = Vector2(1801, 579)
+
+[node name="Coin15" parent="Coins" unique_id=545084996 instance=ExtResource("7_4rwr5")]
+position = Vector2(2043, 580)
+
+[node name="Coin16" parent="Coins" unique_id=1531904126 instance=ExtResource("7_4rwr5")]
+position = Vector2(2425, 532)
+
+[node name="Coin17" parent="Coins" unique_id=1557486432 instance=ExtResource("7_4rwr5")]
+position = Vector2(2825, 446)
+
+[node name="Coin18" parent="Coins" unique_id=726796075 instance=ExtResource("7_4rwr5")]
+position = Vector2(2734, 446)
+
+[node name="Coin19" parent="Coins" unique_id=547032369 instance=ExtResource("7_4rwr5")]
+position = Vector2(2536, 372)
+
+[node name="Coin20" parent="Coins" unique_id=1398084718 instance=ExtResource("7_4rwr5")]
+position = Vector2(2344, 355)
+
+[node name="Coin21" parent="Coins" unique_id=1578257687 instance=ExtResource("7_4rwr5")]
+position = Vector2(2424, 388)
+
+[node name="Coin22" parent="Coins" unique_id=1987892358 instance=ExtResource("7_4rwr5")]
+position = Vector2(2223, 262)
+
+[node name="Coin23" parent="Coins" unique_id=1696354798 instance=ExtResource("7_4rwr5")]
+position = Vector2(2248, 147)
+
+[node name="Coin24" parent="Coins" unique_id=670834181 instance=ExtResource("7_4rwr5")]
+position = Vector2(1945, 211)
+
+[node name="Coin25" parent="Coins" unique_id=1160565113 instance=ExtResource("7_4rwr5")]
+position = Vector2(2025, 211)
+
+[node name="Coin26" parent="Coins" unique_id=144976891 instance=ExtResource("7_4rwr5")]
+position = Vector2(1544, 228)
+
+[node name="Coin27" parent="Coins" unique_id=1804464594 instance=ExtResource("7_4rwr5")]
+position = Vector2(1753, 178)
+
+[node name="Coin28" parent="Coins" unique_id=233235801 instance=ExtResource("7_4rwr5")]
+position = Vector2(2456, 65)
+
+[node name="Coin29" parent="Coins" unique_id=1311135842 instance=ExtResource("7_4rwr5")]
+position = Vector2(2568, 131)
+
+[node name="Coin30" parent="Coins" unique_id=985779076 instance=ExtResource("7_4rwr5")]
+position = Vector2(2910, -14)
+
+[node name="Coin31" parent="Coins" unique_id=120704076 instance=ExtResource("7_4rwr5")]
+position = Vector2(2665, -91)
+
+[node name="Coin32" parent="Coins" unique_id=364834750 instance=ExtResource("7_4rwr5")]
+position = Vector2(2384, -309)
+
+[node name="Coin33" parent="Coins" unique_id=1220627366 instance=ExtResource("7_4rwr5")]
+position = Vector2(2121, -283)
+
+[node name="Coin34" parent="Coins" unique_id=110687533 instance=ExtResource("7_4rwr5")]
+position = Vector2(1913, -365)
+
+[node name="Coin35" parent="Coins" unique_id=2086940086 instance=ExtResource("7_4rwr5")]
+position = Vector2(2025, -428)
+
+[node name="Coin36" parent="Coins" unique_id=807930597 instance=ExtResource("7_4rwr5")]
+position = Vector2(2184, -461)
+
+[node name="Coin37" parent="Coins" unique_id=1840734363 instance=ExtResource("7_4rwr5")]
+position = Vector2(2280, -525)
+
+[node name="Coin38" parent="Coins" unique_id=540787646 instance=ExtResource("7_4rwr5")]
+position = Vector2(2712, -589)
+
+[node name="Coin39" parent="Coins" unique_id=1008918438 instance=ExtResource("7_4rwr5")]
+position = Vector2(3001, -619)
+
+[node name="Coin40" parent="Coins" unique_id=2088732547 instance=ExtResource("7_4rwr5")]
+position = Vector2(3096, -619)
+
+[node name="Coin41" parent="Coins" unique_id=651505873 instance=ExtResource("7_4rwr5")]
+position = Vector2(3209, -619)
+
+[node name="Coin42" parent="Coins" unique_id=612720594 instance=ExtResource("7_4rwr5")]
+position = Vector2(3400, -636)
+
+[node name="EndPoint" parent="." unique_id=427564206 instance=ExtResource("8_xbw1n")]
+position = Vector2(3497, -638)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="EndPoint" unique_id=1178145632]
+libraries/ = SubResource("AnimationLibrary_2hsy7")
+autoplay = &"naik_turun"
+
+[node name="Slime" type="Node" parent="." unique_id=1466943045]
+
+[node name="PuepleSlime" parent="Slime" unique_id=352163208 instance=ExtResource("9_hsn8a")]
+position = Vector2(2521, 495)
+
+[node name="PuepleSlime2" parent="Slime" unique_id=1621988136 instance=ExtResource("9_hsn8a")]
+position = Vector2(2409, 559)
+
+[node name="PuepleSlime3" parent="Slime" unique_id=1191717988 instance=ExtResource("9_hsn8a")]
+position = Vector2(2474, 367)
+
+[node name="PuepleSlime4" parent="Slime" unique_id=708815089 instance=ExtResource("9_hsn8a")]
+position = Vector2(2425, 95)
+
+[node name="PuepleSlime5" parent="Slime" unique_id=1430810425 instance=ExtResource("9_hsn8a")]
+position = Vector2(2649, -81)
+
+[node name="PuepleSlime6" parent="Slime" unique_id=1378969697 instance=ExtResource("9_hsn8a")]
+position = Vector2(2729, -49)
+
+[node name="PuepleSlime7" parent="Slime" unique_id=2078227176 instance=ExtResource("9_hsn8a")]
+position = Vector2(1641, 543)
+
+[node name="PuepleSlime8" parent="Slime" unique_id=41391471 instance=ExtResource("9_hsn8a")]
+position = Vector2(1145, 463)
+
+[node name="PuepleSlime9" parent="Slime" unique_id=996151516 instance=ExtResource("9_hsn8a")]
+position = Vector2(1673, 191)
+
+[node name="PuepleSlime10" parent="Slime" unique_id=1267775879 instance=ExtResource("9_hsn8a")]
+position = Vector2(2345, 127)
+
+[node name="PuepleSlime11" parent="Slime" unique_id=2012623915 instance=ExtResource("9_hsn8a")]
+position = Vector2(2297, -289)
+
+[node name="PuepleSlime12" parent="Slime" unique_id=2108862899 instance=ExtResource("9_hsn8a")]
+position = Vector2(2601, -561)
+
+[node name="GameOverMenu" type="CanvasLayer" parent="." unique_id=1954226517]
+process_mode = 3
+visible = false
+script = ExtResource("10_hlv5w")
+
+[node name="Control" type="ColorRect" parent="GameOverMenu" unique_id=132011155]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.83756787, 0.438441, 0.39979297, 1)
+
+[node name="Label" type="Label" parent="GameOverMenu/Control" unique_id=559463249]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -129.5
+offset_top = -77.5
+offset_right = 129.5
+offset_bottom = -46.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("11_e3rac")
+theme_override_font_sizes/font_size = 30
+text = "Game Over"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="RestartButton" type="Button" parent="GameOverMenu/Control" unique_id=135543570]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -51.0
+offset_top = -0.5
+offset_right = 51.0
+offset_bottom = 30.5
+grow_horizontal = 2
+grow_vertical = 2
+mouse_default_cursor_shape = 2
+theme_override_fonts/font = ExtResource("12_2hsy7")
+theme_override_font_sizes/font_size = 15
+text = "Restart"
+
+[node name="SettingsButton" type="Button" parent="GameOverMenu/Control" unique_id=672163908]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -53.0
+offset_top = 45.5
+offset_right = 53.0
+offset_bottom = 76.5
+grow_horizontal = 2
+grow_vertical = 2
+mouse_default_cursor_shape = 2
+theme_override_fonts/font = ExtResource("12_2hsy7")
+theme_override_font_sizes/font_size = 15
+text = "Settings"
+
+[node name="QuitButton" type="Button" parent="GameOverMenu/Control" unique_id=1865645087]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -53.0
+offset_top = 91.5
+offset_right = 53.0
+offset_bottom = 122.5
+grow_horizontal = 2
+grow_vertical = 2
+mouse_default_cursor_shape = 2
+theme_override_fonts/font = ExtResource("12_2hsy7")
+theme_override_font_sizes/font_size = 15
+text = "Quit"
+
+[node name="GameOverMenuSlime" type="CanvasLayer" parent="." unique_id=706161553]
+process_mode = 3
+visible = false
+script = ExtResource("10_hlv5w")
+
+[node name="Control" type="ColorRect" parent="GameOverMenuSlime" unique_id=1821187346]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.83756787, 0.438441, 0.39979297, 1)
+
+[node name="Label" type="Label" parent="GameOverMenuSlime/Control" unique_id=840273012]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -125.5
+offset_top = -131.0
+offset_right = 125.5
+offset_bottom = -101.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("11_e3rac")
+theme_override_font_sizes/font_size = 30
+text = "Game Over"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Caption" type="Label" parent="GameOverMenuSlime/Control" unique_id=1289858499]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -211.0
+offset_top = -74.5
+offset_right = 211.0
+offset_bottom = -39.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("11_e3rac")
+theme_override_font_sizes/font_size = 15
+text = "Maybe don't touch 
+the purple little thingy next time."
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="RestartButton" type="Button" parent="GameOverMenuSlime/Control" unique_id=368171922]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -51.0
+offset_top = -5.5
+offset_right = 51.0
+offset_bottom = 25.5
+grow_horizontal = 2
+grow_vertical = 2
+mouse_default_cursor_shape = 2
+theme_override_fonts/font = ExtResource("12_2hsy7")
+theme_override_font_sizes/font_size = 15
+text = "Restart"
+
+[node name="SettingsButton" type="Button" parent="GameOverMenuSlime/Control" unique_id=1545028334]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -53.0
+offset_top = 41.5
+offset_right = 53.0
+offset_bottom = 72.5
+grow_horizontal = 2
+grow_vertical = 2
+mouse_default_cursor_shape = 2
+theme_override_fonts/font = ExtResource("12_2hsy7")
+theme_override_font_sizes/font_size = 15
+text = "Settings"
+
+[node name="QuitButton" type="Button" parent="GameOverMenuSlime/Control" unique_id=1084558374]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -53.0
+offset_top = 91.5
+offset_right = 53.0
+offset_bottom = 122.5
+grow_horizontal = 2
+grow_vertical = 2
+mouse_default_cursor_shape = 2
+theme_override_fonts/font = ExtResource("12_2hsy7")
+theme_override_font_sizes/font_size = 15
+text = "Quit"
+
+[node name="Finish" type="CanvasLayer" parent="." unique_id=2008803151]
+visible = false
+script = ExtResource("13_e3rac")
+
+[node name="Control" type="ColorRect" parent="Finish" unique_id=547456339]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.83756787, 0.438441, 0.39979297, 1)
+
+[node name="FinishLabel" type="Label" parent="Finish/Control" unique_id=1165529428]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -297.0
+offset_top = -134.5
+offset_right = 297.0
+offset_bottom = -35.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("11_e3rac")
+theme_override_font_sizes/font_size = 30
+text = "PEAK ACHIEVED.
+THERE IS NOTHING ELSE.
+PLEASE STOP."
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="RestartButton2" type="Button" parent="Finish/Control" unique_id=125078691]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -63.0
+offset_top = 35.5
+offset_right = 58.0
+offset_bottom = 66.5
+grow_horizontal = 2
+grow_vertical = 2
+mouse_default_cursor_shape = 2
+theme_override_fonts/font = ExtResource("12_2hsy7")
+theme_override_font_sizes/font_size = 15
+text = "Restart"
+
+[node name="QuitButton2" type="Button" parent="Finish/Control" unique_id=1969478868]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -63.0
+offset_top = 85.5
+offset_right = 60.0
+offset_bottom = 116.5
+grow_horizontal = 2
+grow_vertical = 2
+mouse_default_cursor_shape = 2
+theme_override_fonts/font = ExtResource("12_2hsy7")
+theme_override_font_sizes/font_size = 15
+text = "Quit"
+
+[node name="MainMenu" type="Button" parent="Finish/Control" unique_id=1528438386]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -53.0
+offset_top = 138.5
+offset_right = 53.0
+offset_bottom = 169.5
+grow_horizontal = 2
+grow_vertical = 2
+mouse_default_cursor_shape = 2
+theme_override_fonts/font = ExtResource("12_2hsy7")
+theme_override_font_sizes/font_size = 15
+text = "Main Menu"
+
+[connection signal="pressed" from="Finish/Control/MainMenu" to="." method="_on_main_menu_pressed"]

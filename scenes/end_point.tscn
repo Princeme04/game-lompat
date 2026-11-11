@@ -1,0 +1,21 @@
+[gd_scene format=3 uid="uid://c2hwnenn0s43e"]
+
+[ext_resource type="Texture2D" uid="uid://d0q2g65ahgok" path="res://assets/sprites/world_tileset.png" id="1_5pkkc"]
+[ext_resource type="Script" uid="uid://bluagv4p2nsje" path="res://scripts/end_point.gd" id="1_fs12u"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_s4o2x"]
+size = Vector2(8, 14)
+
+[node name="EndPoint" type="Area2D" unique_id=427564206]
+z_index = 1
+script = ExtResource("1_fs12u")
+
+[node name="AnimatedSprite2D" type="Sprite2D" parent="." unique_id=563771016]
+texture = ExtResource("1_5pkkc")
+region_enabled = true
+region_rect = Rect2(3.96762, 129.87234, 8.140656, 14.049652)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=139519060]
+shape = SubResource("RectangleShape2D_s4o2x")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

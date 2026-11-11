@@ -1,0 +1,16 @@
+[gd_scene format=3 uid="uid://devqro8g757pi"]
+
+[ext_resource type="Texture2D" uid="uid://cxuqjimd7csiq" path="res://assets/sprites/platforms.png" id="1_34c4k"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_s4o2x"]
+size = Vector2(32, 8)
+
+[node name="SnowPlatform" type="AnimatableBody2D" unique_id=1600775608]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1113317160]
+texture = ExtResource("1_34c4k")
+region_enabled = true
+region_rect = Rect2(15.790098, 48.032574, 32.250168, 8.953831)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1986467727]
+shape = SubResource("RectangleShape2D_s4o2x")

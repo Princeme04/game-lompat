@@ -1,0 +1,260 @@
+[gd_scene format=3 uid="uid://bvfnk3s0mnlie"]
+
+[ext_resource type="Script" uid="uid://co2e0nycisqow" path="res://scripts/main_menu.gd" id="1_bqqt6"]
+[ext_resource type="FontFile" uid="uid://c53kogtyjwsss" path="res://assets/fonts/PixelOperator8-Bold.ttf" id="1_ekxnf"]
+[ext_resource type="FontFile" uid="uid://dbjl1e6kdxpl6" path="res://assets/fonts/PixelOperator8.ttf" id="2_bqqt6"]
+[ext_resource type="Texture2D" uid="uid://bpf2rk10yv1bl" path="res://assets/sprites/MainMenu_COVER.jpeg" id="2_wu84c"]
+
+[node name="MainMenu" type="ColorRect" unique_id=467339688]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.83756787, 0.438441, 0.39979297, 1)
+script = ExtResource("1_bqqt6")
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=273271966]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_wu84c")
+
+[node name="Label" type="Label" parent="." unique_id=1386848553]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -232.5
+offset_top = -90.0
+offset_right = 232.5
+offset_bottom = -50.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("1_ekxnf")
+theme_override_font_sizes/font_size = 30
+text = "Sir Coinsalot"
+horizontal_alignment = 1
+
+[node name="StartButton" type="Button" parent="." unique_id=1882736442]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -59.0
+offset_top = -17.5
+offset_right = 57.0
+offset_bottom = 17.5
+grow_horizontal = 2
+grow_vertical = 2
+mouse_default_cursor_shape = 2
+theme_override_fonts/font = ExtResource("2_bqqt6")
+theme_override_font_sizes/font_size = 15
+text = "Start"
+
+[node name="QuitButton" type="Button" parent="." unique_id=320872273]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -60.0
+offset_top = 83.0
+offset_right = 59.0
+offset_bottom = 115.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_default_cursor_shape = 2
+theme_override_fonts/font = ExtResource("2_bqqt6")
+theme_override_font_sizes/font_size = 15
+text = "Quit"
+
+[node name="SettingsButton" type="Button" parent="." unique_id=45736502]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -59.75
+offset_top = 33.0
+offset_right = 59.75
+offset_bottom = 67.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_default_cursor_shape = 2
+theme_override_fonts/font = ExtResource("2_bqqt6")
+theme_override_font_sizes/font_size = 15
+text = "Settings"
+
+[node name="Credit" type="Button" parent="." unique_id=686181764]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -59.75
+offset_top = 129.0
+offset_right = 59.75
+offset_bottom = 163.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_default_cursor_shape = 2
+theme_override_fonts/font = ExtResource("2_bqqt6")
+theme_override_font_sizes/font_size = 15
+text = "Credit"
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1247967302]
+visible = false
+
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer" unique_id=1676427707]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -250.0
+offset_top = -250.0
+offset_right = 250.0
+offset_bottom = 250.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.83756787, 0.438441, 0.39979297, 1)
+
+[node name="Developer" type="Label" parent="CanvasLayer/ColorRect" unique_id=1681787311]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -147.5
+offset_top = -119.5
+offset_right = 147.5
+offset_bottom = -96.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("2_bqqt6")
+theme_override_font_sizes/font_size = 15
+text = "Developed by batukkering"
+
+[node name="Developer3" type="Label" parent="CanvasLayer/ColorRect" unique_id=1193751595]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -147.5
+offset_top = -93.5
+offset_right = 147.5
+offset_bottom = -70.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("2_bqqt6")
+theme_override_font_sizes/font_size = 12
+text = "batukkeringg@gmail.com"
+horizontal_alignment = 1
+
+[node name="Developer4" type="Label" parent="CanvasLayer/ColorRect" unique_id=2055371383]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -147.5
+offset_top = 99.5
+offset_right = 147.5
+offset_bottom = 122.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("2_bqqt6")
+theme_override_font_sizes/font_size = 12
+text = "https://brackeysgames.itch.io/
+brackeys-platformer-bundle"
+horizontal_alignment = 1
+
+[node name="Developer2" type="Label" parent="CanvasLayer/ColorRect" unique_id=1781674607]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -178.0
+offset_top = -35.0
+offset_right = 190.0
+offset_bottom = 19.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("2_bqqt6")
+theme_override_font_sizes/font_size = 15
+text = "Sir Coinsalot is the first 
+game developed by batukkering.
+Thank you for playing"
+horizontal_alignment = 1
+
+[node name="Sir Coinsalot" type="Label" parent="CanvasLayer/ColorRect" unique_id=1033916507]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -116.5
+offset_top = -175.5
+offset_right = 116.5
+offset_bottom = -152.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("1_ekxnf")
+theme_override_font_sizes/font_size = 20
+text = "Sir Coinsalot"
+
+[node name="Sir Coinsalot2" type="Label" parent="CanvasLayer/ColorRect" unique_id=165934158]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -116.5
+offset_top = 67.5
+offset_right = 116.5
+offset_bottom = 90.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("1_ekxnf")
+theme_override_font_sizes/font_size = 20
+text = "ASSET CREDITS"
+
+[node name="Button" type="Button" parent="CanvasLayer/ColorRect" unique_id=1258036982]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -22.5
+offset_top = -84.0
+offset_right = 22.5
+offset_bottom = -53.0
+grow_horizontal = 2
+grow_vertical = 0
+mouse_default_cursor_shape = 2
+theme_override_fonts/font = ExtResource("2_bqqt6")
+theme_override_font_sizes/font_size = 17
+text = "Back "
+
+[connection signal="pressed" from="Credit" to="." method="_on_credit_pressed"]
+[connection signal="pressed" from="CanvasLayer/ColorRect/Button" to="." method="_on_button_pressed"]

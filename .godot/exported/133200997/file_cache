@@ -1,0 +1,15 @@
+res://scenes/audio_stream_player.tscn::e1496d130187918afb1e0afe0d443c6a::1794286158::res://.godot/exported/133200997/export-01ac0ea0bd27a0198e60eb30338b5ff3-audio_stream_player.scn
+res://scenes/background_tile.tscn::24610867f449c35cd9f7c90de1dce592::1794286158::res://.godot/exported/133200997/export-f48a09c072d4458f69693ef8e47b93f8-background_tile.scn
+res://scenes/coin.tscn::bdf64ea9338c74a8e38af76aba4aa06c::1794286158::res://.godot/exported/133200997/export-96b2131180b71dd158e52c5527d22dd4-coin.scn
+res://scenes/end_point.tscn::e3b068e5d912ab38bd530b136373dc8a::1794286158::res://.godot/exported/133200997/export-2049ada6edfc4f1193d939b00aeca44c-end_point.scn
+res://scenes/Gameplay.tscn::eb0a1e4d48670dbbf32940008dc17540::1794286158::res://.godot/exported/133200997/export-f5f6ac0a10531397490543dbb1fc0259-Gameplay.scn
+res://scenes/green_moving_slime.tscn::6ed6ac55eec399239f0d719fb3443358::1794286158::res://.godot/exported/133200997/export-1ecc0adeb536b649f403458c7d15c485-green_moving_slime.scn
+res://scenes/green_platform.tscn::3e8bfd9bc7d8eeb8207300ed747db9fe::1794286158::res://.godot/exported/133200997/export-8edd0b22ff3a7d8af7fcd55b8fccf789-green_platform.scn
+res://scenes/grey_platform.tscn::6e23ba9748ddbd99ac821c3970cee223::1794286158::res://.godot/exported/133200997/export-9025be7cc8406af79f0e5d5b1287cea1-grey_platform.scn
+res://scenes/main_menu.tscn::67263af2577088db902af042464353a7::1794286158::res://.godot/exported/133200997/export-ea5c6ad4629af728dc514cefde332394-main_menu.scn
+res://scenes/player.tscn::a8ebc4e83b7365b6512e75793fb8746c::1794286158::res://.godot/exported/133200997/export-234fb6894ec6226e856ab7f825500d3d-player.scn
+res://scenes/pueple_slime.tscn::ce4eeadb353327591023592ee6c2eca8::1794286158::res://.godot/exported/133200997/export-8c79abc0f0bb2a4c027ac45df9d10dff-pueple_slime.scn
+res://scenes/settings.tscn::9a9435750b895b0bfcbe0331b5f77616::1794286158::res://.godot/exported/133200997/export-7416c78d345eded4b396246a6c8adbe0-settings.scn
+res://scenes/snow_platform.tscn::855139a5e11d48a61c41a91c5ab1cb4c::1794286158::res://.godot/exported/133200997/export-135887eca5f4c7344e8e9af4c3f941fc-snow_platform.scn
+res://scenes/yellow_platform.tscn::03602eb69c138daa3f56616401ca29cd::1794286158::res://.godot/exported/133200997/export-c72c9c3c6f58ef8614978ae2e6d40381-yellow_platform.scn
+res://default_bus_layout.tres::2c8c346df88b4307da2f7ef2dfdbb208::1794286158::res://.godot/exported/133200997/export-19246414aa9fb561ced4b8dce477acec-default_bus_layout.res
